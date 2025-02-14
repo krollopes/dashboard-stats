@@ -1,15 +1,33 @@
 import { useEffect, useState } from 'react';
-import { api } from '../services/api';
 
 const useDashboardData = () => {
-  const [sales, setSales] = useState<number[]>([]);
-  const [users, setUsers] = useState<number[]>([]);
+  const [sales, setSales] = useState([]);
+  const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    api.get('/').then((response) => {
-      setSales(response.data.sales);
-      setUsers(response.data.users);
-    });
+    const fetchData = async () => {
+      try {
+        // Simulando dados de vendas
+        const salesData = [
+          { date: '2025-01-01', value: 100 },
+          { date: '2025-01-02', value: 150 },
+        ];
+        console.log('Sales Data:', salesData);
+        setSales(salesData);
+
+        // Fetching user data from the API
+        const usersResponse = await fetch(
+          'https://randomuser.me/api/?results=5'
+        );
+        const usersData = await usersResponse.json();
+        console.log('Users Data:', usersData.results); // Adicione este log
+        setUsers(usersData.results);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
   }, []);
 
   return { sales, users };
