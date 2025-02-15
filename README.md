@@ -1,60 +1,83 @@
-# Dashboard Stats
+# 📊 Dashboard de Estatísticas
 
-## Descrição
-Este projeto é um painel de estatísticas que exibe dados em tempo real de várias fontes. Ele foi desenvolvido para fornecer uma visão clara e concisa das métricas importantes para o seu negócio.
+Este projeto é um **Dashboard de Estatísticas** desenvolvido com **Next.js (App Router)**, **React** e **Chart.js**. Ele exibe gráficos interativos baseados em dados dinâmicos, sendo ideal para visualizar métricas e tendências de forma intuitiva.
 
-## Funcionalidades
-- Visualização de dados em tempo real
-- Gráficos interativos
-- Filtros personalizados
-- Exportação de relatórios
+## 🚀 Tecnologias Utilizadas
 
-## Tecnologias Utilizadas
-- React
-- Node.js
-- Express
-- MongoDB
-- Chart.js
+- **Next.js** (App Router)
+- **React**
+- **Chart.js**
+- **Tailwind CSS** (ou Styled Components, caso prefira)
+- **Zustand** (para gerenciamento de estado leve)
+- **Axios** (para consumo de APIs)
 
-## Instalação
-1. Clone o repositório:
-  ```bash
-  git clone https://github.com/seu-usuario/dashboard-stats.git
-  ```
-2. Navegue até o diretório do projeto:
-  ```bash
-  cd dashboard-stats
-  ```
-3. Instale as dependências:
-  ```bash
-  npm install
-  ```
+## 📂 Estrutura do Projeto
 
-## Uso
-1. Inicie o servidor:
-  ```bash
-  npm start
-  ```
-2. Abra o navegador e acesse:
-  ```
-  http://localhost:3000
-  ```
+```
+📦 dashboard-estatisticas
+├── 📂 src
+│   ├── 📂 app
+│   │   ├── 📂 dashboard
+│   │   │   ├── 📜 page.tsx (Página do dashboard)
+│   │   │   ├── 📜 layout.tsx (Layout do dashboard)
+│   ├── 📂 components
+│   │   ├── 📜 ChartComponent.tsx (Componente de gráficos)
+│   │   ├── 📜 Card.tsx (Componente de cartões informativos)
+│   ├── 📂 services
+│   │   ├── 📜 api.ts (Configuração de requisições)
+│   ├── 📂 store
+│   │   ├── 📜 dashboardStore.ts (Gerenciamento de estado com Zustand)
+│   ├── 📂 styles
+│   │   ├── 📜 globals.css (Caso utilize Tailwind)
+│   ├── 📜 page.tsx (Página inicial)
+├── 📜 package.json
+├── 📜 README.md
+```
 
-## Contribuição
-1. Faça um fork do projeto
-2. Crie uma branch para sua feature:
-  ```bash
-  git checkout -b minha-feature
-  ```
-3. Commit suas mudanças:
-  ```bash
-  git commit -m 'Adiciona minha feature'
-  ```
-4. Envie para o repositório remoto:
-  ```bash
-  git push origin minha-feature
-  ```
-5. Abra um Pull Request
+## 🛠️ Instalação e Execução
 
-## Licença
-Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+### 📌 Pré-requisitos
+- **Node.js** (versão 18+ recomendada)
+- **pnpm** (gerenciador de pacotes)
+
+### 🔧 Passos para rodar o projeto
+```sh
+# Clone este repositório
+git clone https://github.com/seu-usuario/dashboard-estatisticas.git
+
+# Acesse a pasta do projeto
+cd dashboard-estatisticas
+
+# Instale as dependências
+pnpm install
+
+# Execute o servidor de desenvolvimento
+pnpm dev
+```
+Acesse **http://localhost:3000** no navegador para visualizar o dashboard.
+
+## 📊 Funcionalidades
+
+✅ Exibição de estatísticas em gráficos dinâmicos
+✅ Integração com APIs para dados reais (mockados inicialmente)
+✅ Interface responsiva e interativa
+✅ Gerenciamento de estado eficiente com Zustand
+
+## 📌 Melhorias Futuras
+
+- 🔄 Atualização automática dos gráficos com WebSockets
+- 📡 Integração com uma API real para dados dinâmicos
+- 🎨 Tema customizável pelo usuário
+
+## 📝 Licença
+
+Este projeto está licenciado sob a **MIT License** - veja o arquivo **LICENSE** para mais detalhes.
+
+---
+
+💡 **Dicas**: Sempre faça commits frequentes e bem descritos (em inglês). Exemplo:
+```sh
+git commit -m "feat: add dynamic chart component"
+```
+
+🚀 Vamos codar! 💻
